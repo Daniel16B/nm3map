@@ -1,0 +1,28 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.map {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+.linza {
+	position: absolute;
+	border: 6px solid lime;
+	border-radius: 50%;
+	cursor: none;
+	width: 190px;
+	height: 190px;
+}
