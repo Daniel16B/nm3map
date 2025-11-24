@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'Kallisto';
+	src: url('../fonts/kallisto_thin-webfont.eot');
+	src: url('../fonts/kallisto_thin-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/kallisto_thin-webfont.woff2') format('woff2'),
+		url('../fonts/kallisto_thin-webfont.woff') format('woff'),
+		url('../fonts/kallisto_thin-webfont.ttf') format('truetype'),
+		url('../fonts/kallisto_thin-webfont.svg#Tilt Warp') format('svg');
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -17,12 +27,112 @@ body {
 	padding: 0;
 }
 
+.loader-container {
+	position: fixed;
+	z-index: 100;
+	background: wheat;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	transition: 0.6s;
+}
 
-.linza {
-	position: absolute;
-	border: 6px solid lime;
-	border-radius: 50%;
-	cursor: none;
-	width: 190px;
-	height: 190px;
+.loader-text p {
+	font-family: "Kallisto", sans-serif !important;
+	font-weight: 900;
+	font-size: 24px;
+	color: black;
+	letter-spacing: 0.075em;
+}
+
+.hide {
+	opacity: 0;
+}
+
+header {
+	width: 100vw;
+}
+
+.header-container {
+	width: 100vw;
+	height: 10vh;
+	z-index: 10;
+	position: relative;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #e1fa00;
+	background: radial-gradient(circle, rgba(225, 250, 0, 1) 0%, rgba(232, 223, 151, 1) 100%);
+}
+
+.logo-container {
+	height: 100%;
+}
+
+.logo-container img {
+	height: 10vh;
+}
+
+footer {
+	width: !important 100vw;
+	overflow: hidden;
+}
+
+.footer-container {
+	width: !important 100%;
+	height: 10vh;
+	position: relative;
+	z-index: 10;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #e1fa00;
+	background: radial-gradient(circle, rgba(225, 250, 0, 1) 0%, rgba(232, 223, 151, 1) 100%);
+}
+
+.footer-container p {
+	font-family: "Kallisto", sans-serif !important;
+	font-weight: 900;
+	font-size: 24px;
+	color: black;
+	letter-spacing: 0.075em;
+}
+.footer-container img {
+	height: 100%;
+	margin-right: 50px;
+	bottom: -10px;
+	position: relative;
+}
+
+@media screen and (max-width: 600px) {
+	.footer-container p {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.header-container {
+		height: 5vh;
+	}
+	.logo-container img {
+		height: 5vh;
+	}
+	.container {
+		width: auto;
+		height: 80vh;
+	}
+	
+	.map {
+		width: auto;
+		height: 80vh;
+	}
 }
