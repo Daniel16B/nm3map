@@ -13,6 +13,11 @@ body {
 	padding: 0;
 }
 
+.main-container {
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+
 .container {
 	position: relative;
 	width: 100%;
@@ -81,6 +86,7 @@ header {
 }
 
 footer {
+	height: auto;
 	width: !important 100vw;
 	overflow: hidden;
 }
@@ -115,26 +121,30 @@ footer {
 
 @media screen and (max-width: 600px) {
 	.footer-container p {
-		font-size: 12px;
+		font-size: 24px;
 	}
-	.map {
-		align-self: center;
-		width: auto;
-		height: 80vh;
+
+	footer {
+		height: auto;
 	}
+
+	.footer-container {
+		height: auto;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		
+	}
+
+	.footer-container img {
+		height: 330px;
+		margin-right: 0.5em;
+	}
+	
 }
 
 @media screen and (max-width: 400px) {
-	.header-container {
-		height: 5vh;
-	}
-	.logo-container img {
-		height: 5vh;
-	}
-	.container {
-		width: auto;
-		height: 80vh;
-	}
+	
 	
 	
 }
